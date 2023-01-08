@@ -110,8 +110,8 @@ class BaseLoader(ABC):
             dest="background_color",
             metavar="COLOR",
             type=str,
-            default="#222222",
-            help='Background color of poster (default: "#222222").',
+            default="#171717",
+            help='Background color of poster (default: "#171717").',
         )
         group.add_argument(
             "--track-color",
