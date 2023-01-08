@@ -101,7 +101,7 @@ def run():
     # set title
     # we don't know issue content so use name
     p.title = (
-        f"{args.me } {str(to_year) + ' ' if args.type=='summary' else ''}"
+        f"{str(to_year) + ' ' if args.type=='summary' else ''}"
         + TYPE_INFO_DICT.get(args.type, args.type)
         if args.type not in no_title_types and args.without_type_name
         else args.me
