@@ -58,6 +58,7 @@ jobs:
         if: contains(env.TYPE, 'shanbay')
         run: |
           python -m github_poster shanbay --shanbay_user_name ${{ secrets.SHANBAY_USER_NAME }}  --special-color1 '#33C6A4' --special-color2  '#33C6A4' --me ${{ env.ME }}
+          python -m github_poster shanbay --shanbay_user_name ${{ secrets.SHANBAY_USER_NAME }}  --special-color1 '#33C6A4' --special-color2  '#33C6A4' --me ${{ env.ME }} --light-theme
 
       - name: Run sync duolingo script
         if: contains(env.TYPE, 'duolingo')
@@ -93,6 +94,7 @@ jobs:
         if: contains(env.TYPE, 'github')
         run: |
           python -m github_poster github --github_user_name ${{ secrets.G_USER_NAME }} --me ${{ env.ME }} --with-animation
+          python -m github_poster github --github_user_name ${{ secrets.G_USER_NAME }} --me ${{ env.ME }} --with-animation --light-theme
 
       - name: Run sync gitlab script
         if: contains(env.TYPE, 'gitlab')
@@ -108,6 +110,7 @@ jobs:
         if: contains(env.TYPE, 'bilibili')
         run: |
           python3 -m github_poster bilibili --bilibili_cookie "${{ secrets.BILIBILI_COOKIE }}" --me ${{ env.ME }}
+          python3 -m github_poster bilibili --bilibili_cookie "${{ secrets.BILIBILI_COOKIE }}" --me ${{ env.ME }} --light-theme
 
       - name: Run sync wakatime script
         if: contains(env.TYPE, 'wakatime')

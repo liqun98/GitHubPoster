@@ -56,6 +56,11 @@ def run():
         p.colors["track"] = "#025DB8"
         p.colors["special"] = "#FFD100"
         p.colors["special2"] = "#FFD100"
+    
+    # if light theme, change background color and text color
+    if args.light_theme:
+        p.colors["background"] = "#FFFFFF"
+        p.colors["text"] = "#171717"
 
     # set animate
     p.set_with_animation(args.with_animation)
@@ -141,7 +146,10 @@ def run():
         p.height = 120
         p.width = 120
 
-    file_name = f"{file_name}.svg"
+    if args.light_theme:
+        file_name = f"{file_name}_light.svg"
+    else:
+        file_name = f"{file_name}.svg"
 
     # for summary we have different logic #TODO refactor
     p.draw(d(p), os.path.join(OUT_FOLDER, file_name))

@@ -110,8 +110,8 @@ class BaseLoader(ABC):
             dest="background_color",
             metavar="COLOR",
             type=str,
-            default="#222222",
-            help='Background color of poster (default: "#222222").',
+            default="#171717",
+            help='Background color of poster (default: "#171717").',
         )
         group.add_argument(
             "--track-color",
@@ -219,6 +219,13 @@ class BaseLoader(ABC):
             dest="stand_with_ukraine",
             action="store_true",
             help="Stand with Ukraine Special color",
+        )
+        # is light theme
+        group.add_argument(
+            "--light-theme",
+            dest="light_theme",
+            action="store_true",
+            help="if theme color is light",
         )
 
     @classmethod
