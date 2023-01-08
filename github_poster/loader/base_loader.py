@@ -220,6 +220,13 @@ class BaseLoader(ABC):
             action="store_true",
             help="Stand with Ukraine Special color",
         )
+        # is light theme
+        group.add_argument(
+            "--light-theme",
+            dest="light_theme",
+            action="store_true",
+            help="if theme color is light",
+        )
 
     @classmethod
     def add_loader_arguments(cls, parser, optional):
